@@ -1,10 +1,14 @@
-import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Keypad from './components/Keypad';
+import ResultBar from './components/ResultBar';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
+    <div className="container">
+      <Header />
+      <ResultBar />
+      <Keypad />
     </div>
   );
 }

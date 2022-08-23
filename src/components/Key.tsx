@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-const Key: React.FunctionComponent = () => {
-  return (
-    <div>Key</div>
-  )
-}
+import classes from './Key.module.css';
 
-export default Key
+const Key: React.FunctionComponent<{ value: number | string }> = (props) => {
+  let keyClassType = `${classes.gray}`;
+
+  switch (props.value) {
+    case 'DEL':
+      keyClassType = `${classes.blue}`;
+      break;
+    case 'RESET':
+      keyClassType = `${classes.blue}`;
+      break;
+    case '=':
+      keyClassType = `${classes.red}`;
+      break;
+  }
+
+  return <button className={`${classes.key} ${keyClassType}`}>{props.value}</button>;
+};
+
+export default Key;

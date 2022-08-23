@@ -1,0 +1,68 @@
+/* #### Keys
+
+- Desaturated dark blue (key background): hsl(225, 21%, 49%)
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+
+- Red (key background, toggle): hsl(6, 63%, 50%)
+- Dark red (key shadow): hsl(6, 70%, 34%)
+
+- Light grayish orange (key background): hsl(30, 25%, 89%)
+- Grayish orange (key shadow): hsl(28, 16%, 65%) */
+
+.key {
+  /* padding: 5px 23px; */
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 8px;
+  /* color: hsl(223, 31%, 20%);
+  background-color: hsl(30, 25%, 89%);
+  /* border-color: hsl(28, 16%, 65%); */
+  /* border-bottom-color: hsl(28, 16%, 65%); */
+}
+
+.key:hover {
+  cursor: pointer;
+}
+
+.gray {
+  color: hsl(223, 31%, 20%);
+  background-color: hsl(30, 25%, 89%);
+  border-color: hsl(30, 25%, 89%);
+  /* border-color: hsl(28, 16%, 65%); */
+  border-bottom-color: hsl(28, 16%, 65%);
+}
+
+.gray:active {
+  /* color: hsl(223, 31%, 20%); */
+  background-color: hsl(30, 100%, 100%);
+  /* border-color: hsl(28, 16%, 65%); */
+  /* border-bottom-color: hsl(28, 16%, 65%); */
+}
+
+.blue {
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+  /* border-bottom-color: hsl(224, 28%, 35%); */
+  border-bottom-color: hsl(224, 28%, 35%);
+}
+
+.blue:active {
+  /* color: white; */
+  background-color: hsl(225, 95%, 84%);
+  /* border-bottom-color: hsl(224, 28%, 35%); */
+}
+
+.red {
+  color: white;
+  background-color: hsl(6, 63%, 50%);
+  border-bottom-color: hsl(6, 70%, 34%);
+  width: 150%;
+}
+
+.red:active {
+  /* color: white; */
+  background-color: hsl(6, 89%, 64%);
+  /* border-bottom-color: hsl(6, 70%, 34%); */
+}
