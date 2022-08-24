@@ -2,7 +2,10 @@ import React from 'react';
 
 import classes from './Key.module.css';
 
-const Key: React.FunctionComponent<{ value: number | string }> = (props) => {
+const Key: React.FunctionComponent<{
+  value: number | string;
+  addValueForCalculation: (value: number | string) => void;
+}> = (props) => {
   let keyClassType = `${classes.gray}`;
 
   switch (props.value) {
@@ -17,7 +20,13 @@ const Key: React.FunctionComponent<{ value: number | string }> = (props) => {
       break;
   }
 
-  return <button className={`${classes.key} ${keyClassType}`}>{props.value}</button>;
+  const addValueOnClickHandler = () => {
+    props.addValueForCalculation(props.value);
+  }
+
+  return (
+    <button className={`${classes.key} ${keyClassType}`} onClick={addValueOnClickHandler}>{props.value}</button>
+  );
 };
 
 export default Key;

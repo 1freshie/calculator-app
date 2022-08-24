@@ -11,9 +11,12 @@
 
 .key {
   /* padding: 5px 23px; */
+  /* padding: 8px; */
   margin: 5px;
+  height: 80px;
+  width: 200px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   border-radius: 8px;
   /* color: hsl(223, 31%, 20%);
@@ -27,7 +30,7 @@
 }
 
 .gray {
-  color: hsl(223, 31%, 20%);
+  color: hsl(223, 31%, 31%);
   background-color: hsl(30, 25%, 89%);
   border-color: hsl(30, 25%, 89%);
   /* border-color: hsl(28, 16%, 65%); */
@@ -42,7 +45,7 @@
 }
 
 .blue {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: hsl(225, 21%, 49%);
   /* border-bottom-color: hsl(224, 28%, 35%); */
   border-bottom-color: hsl(224, 28%, 35%);

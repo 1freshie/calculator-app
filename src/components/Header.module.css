@@ -1,6 +1,8 @@
 .header {
   margin-top: 5rem;
+  font-size: 32px;
   /* padding: 2rem; */
+  margin-bottom: 3rem;
 }
 
 .header h4 {

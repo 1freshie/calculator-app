@@ -2,14 +2,15 @@
   background-color: hsl(224, 36%, 15%);
   border-radius: 10px;
   /* border: hsl(224, 36%, 15%); */
-  height: 100px;
+  height: 150px;
   text-align: right;
   margin-bottom: 2rem;
-  
+  font-size: 60px;
 }
 
 .result h4 {
   color: #fff;
-  display: inline-block;
-  padding-right: 1rem;
+  /* display: inline-block; */
+  padding: 3rem;
+  /* padding-right: 1rem; */
 }
