@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import './App.css';
 import Header from './components/Header';
@@ -8,7 +8,11 @@ import ResultBar from './components/ResultBar';
 const OPERATORS = '+-/x';
 const SYMBOLS = OPERATORS + '.';
 
-const calculate = (a: string | number, b: string | number, operator: string): number => {
+const calculate = (
+  a: string | number,
+  b: string | number,
+  operator: string
+): number => {
   switch (operator) {
     case '+':
       return +a + +b;
@@ -21,7 +25,7 @@ const calculate = (a: string | number, b: string | number, operator: string): nu
     default:
       return 0;
   }
-}
+};
 
 const computateResult = (expression: string): string => {
   const numbers = expression.split(/[+x/-]/g);
@@ -35,18 +39,15 @@ const computateResult = (expression: string): string => {
   }, []);
   console.log(operators, numbers);
 
-  return operators.reduce<number>((result, operator, index) => {
-    return calculate(result, numbers[index + 1], operator);
-  }, +numbers[0]).toString();
+  return operators
+    .reduce<number>((result, operator, index) => {
+      return calculate(result, numbers[index + 1], operator);
+    }, +numbers[0])
+    .toString();
 };
 
 const App: React.FunctionComponent = () => {
-  // const [changableValue, setChangableValue] = useState<string>('');
-  // const [values, setValues] = useState<string[]>([]);
   const [expression, setExpression] = useState<string>('0');
-
-  // let currentValues: string[] = [];
-  // let changableValue: string = '';
 
   const addValueForCalculationHandler = (value: number | string) => {
     setExpression((prevExpression) => {
@@ -104,62 +105,9 @@ const App: React.FunctionComponent = () => {
         return prevExpression.slice(0, prevExpression.length - 1) + value;
       }
 
-      // console.log(prevToLastChar, lastChar);
-
       return prevExpression + value;
     });
-    // let currentValue = value.toString();
-    // if (currentValue === '') return;
-
-    // setChangableValue((previousChangableValue) => {
-    //   let newChangableValue: string = '';
-    //   // if (!isNaN(Number(currentValue)) || currentValue === '.') {
-    //   //   newChangableValue = previousChangableValue + currentValue;
-    //   // } else {
-    //   //   newChangableValue = currentValue;
-    //   // }
-
-    //   newChangableValue =
-    //     !isNaN(Number(currentValue)) || currentValue === '.'
-    //       ? previousChangableValue + currentValue
-    //       : currentValue;
-
-    //   return newChangableValue;
-    // });
   };
-
-  // console.log(changableValue)
-
-  // useEffect(() => {
-  //   if (changableValue === '') return;
-
-  //   // console.log('1: ' + newValues)
-  //   let isRealValue = !isNaN(Number(changableValue));
-
-  //   setValues((previousValues) => {
-  //     let newValues = [...previousValues];
-  //     let changableIndex = previousValues.indexOf(changableValue);
-
-  //     // if (isRealValue) {
-  //     //   // newValues = previousValues;
-  //     //   // console.log('2: ' + newValues)
-  //     //   newValues = newValues.splice(changableIndex, newValues.length - 1);
-  //     // } else {
-  //     //   newValues = [...previousValues, changableValue];
-  //     // }
-  //     // let newValues = [...previousValues, changableValue];
-
-  //     newValues = isRealValue
-  //       ? newValues.splice(changableIndex, newValues.length - 1)
-  //       : [...previousValues, changableValue];
-
-  //     return newValues;
-  //   });
-  //   // console.log(newValues)
-  // }, [changableValue]);
-
-  // // console.log(currentValues);
-  // console.log(values);
 
   return (
     <div className="container">
