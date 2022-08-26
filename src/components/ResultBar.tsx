@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
 import classes from './ResultBar.module.css';
 
-const ResultBar: React.FunctionComponent<{ values: string[] }> = (props) => {
-  const [result, setResult] = useState(0);
+type Props = {
+  result: string,
+}
 
-  
-
-  const calculateSolutionHandler = () => {};
-
+const ResultBar: React.FunctionComponent<Props> = (props) => {
   return (
     <div className={classes.result}>
-      <h4>300,000</h4>
+      <h4>{props.result}</h4>
     </div>
   );
 };

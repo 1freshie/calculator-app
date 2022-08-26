@@ -28,7 +28,7 @@ const Keypad: React.FunctionComponent<{ addValueForCalculation: (value: number |
   return (
     <div className={classes.keypad}>
       {KEYPAD_VALUES.map((value) => (
-        <Key value={value} addValueForCalculation={props.addValueForCalculation} />
+        <Key key={value} value={value} addValueForCalculation={props.addValueForCalculation} />
       ))}
     </div>
   );

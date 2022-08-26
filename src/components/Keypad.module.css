@@ -1,7 +1,10 @@
 .keypad {
   background-color: hsl(223, 31%, 20%);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.75rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 5rem);
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
 }
